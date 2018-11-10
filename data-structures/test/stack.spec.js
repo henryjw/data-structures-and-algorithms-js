@@ -21,6 +21,12 @@ describe('Stack', () => {
 
             expect(stack.peek()).to.equal(1)
         })
+
+        it('returns undefined if empty', () => {
+            const stack = new Stack()
+            
+            expect(stack.peek()).to.be.undefined
+        })
     })
     
 
@@ -43,6 +49,20 @@ describe('Stack', () => {
 
             expect(stack._items).to.be.empty
         })
+
+        it('returns undefined if popped when empty', () => {
+            const stack = new Stack
+            const item = stack.pop()
+
+            expect(item).to.be.undefined
+        })
+
+        it('has length 0 if popped when empty', () => {
+            const stack = new Stack
+            stack.pop()
+
+            expect(stack.length()).to.equal(0)
+        })
     })
 
     describe('.clear()', () => {
@@ -52,6 +72,13 @@ describe('Stack', () => {
             stack.clear()
             
             expect(stack.isEmpty()).to.be.true  
+        })
+
+        it('remains empty if already empty', () => {
+            const stack = new Stack()
+            stack.clear();
+
+            expect(stack.isEmpty()).to.be.true
         })
     })
 
