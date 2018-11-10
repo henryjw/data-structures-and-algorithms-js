@@ -1,0 +1,19 @@
+{
+  "name": "data-structures-and-algorithms-js",
+  "version": "0.0.0",
+  "description": "Implementations of various data structures and algorithms for practice",
+  "private": true,
+  "scripts": {
+    "test": "npm run test-algo && npm run test-ds",
+    "test-algo": "mocha algorithms/test",
+    "test-ds": "mocha data-structures/test"
+  },
+  "keywords": [],
+  "author": "Henry Williams",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "mocha": "^5.2.0"
+  }
+}
